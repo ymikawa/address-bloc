@@ -77,6 +77,8 @@ RSpec.describe AddressBook do
       book.import_from_csv("entries.csv")
       entry_five = book.entries[4]
       check_entry(entry_five, "Sussie", "555-555-2036", "sussie@blocmail.com")
+    end
+  end
 
   describe "remove_entry" do
     it "deletes an entry using the name, phone number, and email address" do
