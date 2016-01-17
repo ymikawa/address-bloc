@@ -32,18 +32,6 @@ class AddressBook
        end
      end
 
-     def remove_entry(name, phone_number, email)
-       delete_entry = []
-
-       @entries.each { |entry|
-         if name == entry.name && phone_number == entry.phone_number && email == entry.email
-           delete_entry = entry
-         end
-       }
-
-       @entries.delete(delete_entry)
-     end
-
      def binary_search(name)
        lower = 0
        upper = @entries.length - 1
